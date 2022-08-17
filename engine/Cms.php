@@ -10,6 +10,11 @@ class Cms
     private $di;
 
     /**
+     * @var
+     */
+    public $db;
+
+    /**
      * @param $di
      */
     public function __construct($di)
