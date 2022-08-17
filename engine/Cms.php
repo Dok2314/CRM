@@ -1,6 +1,6 @@
 <?php
 
-namespace engine;
+namespace Engine;
 
 class Cms
 {
@@ -18,7 +18,7 @@ class Cms
     }
 
     /**
-     * run CMS
+     * @return void
      */
     public function run()
     {
