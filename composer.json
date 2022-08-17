@@ -6,11 +6,13 @@
             "email": "dok@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "ext-pdo": "*"
+    },
     "autoload": {
         "psr-4": {
-            "engine\\": "engine",
-            "engine\\di\\": "engine/di"
+            "Engine\\": "engine",
+            "Engine\\DI\\": "engine/DI"
         }
     }
 }
