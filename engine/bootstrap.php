@@ -11,6 +11,7 @@ try{
 
     $services = require_once __DIR__ . '/Config/Service.php';
 
+    // Init services
     foreach ($services as $service) {
         $provider = new $service($di);
         $provider->init();
