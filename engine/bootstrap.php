@@ -1,17 +1,16 @@
 <?php
 
-require_once __DIR__ . "/../vendor/autoload.php";
+require_once __DIR__ . '/../vendor/autoload.php';
 
 use Engine\DI\DI;
 use Engine\Cms;
-use Engine\core\database\Connection;
 
-try {
+try{
+    //Dependency injection
     $di = new DI();
 
-    $services = require_once __DIR__ . '/config/service.php';
+    $services = require_once __DIR__ . '/Config/Service.php';
 
-    // Init services
     foreach ($services as $service) {
         $provider = new $service($di);
         $provider->init();
@@ -19,6 +18,6 @@ try {
 
     $cms = new Cms($di);
     $cms->run();
-}catch (\ErrorException $e) {
+}catch (\ErrorException $e){
     echo $e->getMessage();
 }

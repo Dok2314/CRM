@@ -2,22 +2,20 @@
 
 namespace Engine;
 
+use Engine\DI\DI;
+
 class Cms
 {
-    /**
-     * @var
-     */
-    private $di;
 
     /**
-     * @var
+     * @var DI
      */
-    public $db;
+    private DI $di;
 
     /**
-     * @param $di
+     * @param DI $di
      */
-    public function __construct($di)
+    public function __construct(DI $di)
     {
         $this->di = $di;
     }
@@ -27,6 +25,5 @@ class Cms
      */
     public function run()
     {
-
     }
 }

@@ -2,13 +2,11 @@
     "name": "dok/crm",
     "authors": [
         {
-            "name": "Dok2314",
+            "name": "Dok",
             "email": "dok@gmail.com"
         }
     ],
-    "require": {
-        "ext-pdo": "*"
-    },
+    "require": {},
     "autoload": {
         "psr-4": {
             "Engine\\": "engine",
