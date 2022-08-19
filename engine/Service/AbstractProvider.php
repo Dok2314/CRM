@@ -1,15 +1,15 @@
 <?php
 
-namespace Engine\service;
+namespace Engine\Service;
 
 use Engine\DI\DI;
 
 abstract class AbstractProvider
 {
     /**
-     * @var
+     * @var DI
      */
-    protected $di;
+    protected DI $di;
 
     /**
      * @param DI $di

@@ -1,6 +1,6 @@
 <?php
 
-namespace Engine\core\database;
+namespace Engine\Core\Database;
 
 use PDO;
 
@@ -22,7 +22,7 @@ class Connection
     /**
      * @return $this
      */
-    private function connect()
+    public function connect()
     {
         $config = [
             'host'     => 'localhost',
@@ -32,7 +32,7 @@ class Connection
             'password' => 'root'
         ];
 
-        $dsn = "mysql:host=".$config['host'].';dbname='.$config['db_name'].';charset='.$config['charset'];
+        $dsn = 'mysql:host='.$config['host'].';dbname='.$config['db_name'].';charset='.$config['charset'];
 
         $this->link = new PDO($dsn, $config['username'], $config['password']);
 
