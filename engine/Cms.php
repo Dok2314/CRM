@@ -3,6 +3,7 @@
 namespace Engine;
 
 use Engine\DI\DI;
+use Engine\Helper\Common;
 
 class Cms
 {
@@ -28,6 +29,10 @@ class Cms
      */
     public function run()
     {
+        $this->router->add('home', '/', 'HomeController::index');
+        $this->router->add('product', '/product/12', 'ProductController::index');
+        $routerDispatch = $this->router->dispatch(Common::getMethod(), Common::getPathUrl());
 
+        var_dump($routerDispatch);
     }
 }
